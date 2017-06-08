@@ -6,12 +6,12 @@
 	<script src="dist/sweetalert.min.js"></script>
 	<script language="javascript">
 	swal({
-	title: "Selamat!",
+	title: "Sukses!",
 	type: "success",
-	text: "Register Berhasil.",
+	text: "Sukses Edit Category.",
 	timer: 2000,
 	showConfirmButton: false });
-	setTimeout("location.href='admin.php'", 2000);
+	setTimeout("location.href='kategori.php'", 2000);
 	</script>
 	</body>
 </html>

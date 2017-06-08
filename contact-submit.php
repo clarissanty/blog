@@ -1,5 +1,6 @@
 <?php
 include('koneksi.php');
+
 $name=$_POST['name'];
 $email=$_POST['email'];
 $username=$_POST['username'];
@@ -10,16 +11,14 @@ $gender=$_POST['gender'];
 
 if($password1==$password2)
 {
-	
-	$query="INSERT INTO admin (name,email,username,password,birthday,gender) VALUE ('$name','$email','$username','$password1','$birthday','$gender')";
-	$hasil=mysql_query($koneksi,$query);
-		if ($hasil)
-			echo include "alert-register-berhasil.php";
-		else
-			echo include "alert-register-gagal.php";
+	$pengacak="34LIE90NHFI976BKA02V9I4HKLW789HI";
+	$password1=md5($pengacak.md5($password1).$pengacak);
+	$query="INSERT INTO tbl_admin (name,email,username,password,birthday,gender) VALUES ('$name','$email','$username','$password1','$birthday','$gender')";
+	$hasil=mysqli_query($koneksi,$query);
+		if ($hasil) include "alert-register-berhasil.php";
+		else include "alert-register-gagal.php";
 }
-else
-	echo include "alert-salah-password.php";
+else include "alert-salah-password.php";
 ?>
 
 

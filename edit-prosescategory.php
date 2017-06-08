@@ -1,9 +1,10 @@
-<?php ob_start();
-include "koneksi.php";
-$title      = $_POST['title'];
-$content    = $_POST['content'];
-$category   = $_POST['category'];
+<?php ;
+include ("koneksi.php");
+$title_post      = $_POST['title_post'];
+$content         = $_POST['content'];
+$category        = $_POST['category'];
 
-$query=mysql_query("edit post set title='$tile', content='$content', category='$category' where title='$title'");
-header('location:kategori.php');
+mysqli_query($koneksi,"UPDATE tbl_post set title_post='$title_post', content='$content', category='$category' where title_post='$_GET[title_post]'");
+header('location:berhasil-editcategory.php');
 ?>
+

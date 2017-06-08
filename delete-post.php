@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +21,7 @@
     tr {
         height : 50px;
     }
-    
+
 </style>
 
     <meta charset="utf-8">
@@ -29,17 +30,18 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Shans Blog - Kategori</title>
+    <title>Shans Blog - Pos</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Theme CSS -->
     <link href="css/clean-blog.min.css" rel="stylesheet">
-   
+    
     <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
     <link rel="stylesheet" type="text/css" href="asset/css/sweetalert.css">
     <link rel="stylesheet" href="css/sweetalert.css">
+
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -79,7 +81,7 @@
                         <a href="kategori.php">Category</a>
                     </li>
                     <li>
-                        <a href="contact.php">Log Out</a>
+                        <a href="contact.php">Log out</a>
                     </li>
                 </ul>
             </div>
@@ -108,43 +110,56 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <center><p><h1>SELAMAT DATANG ADMIN</h1></p></center>
+                <center>
+                    <h1>SELAMAT DATANG ADMIN</h1>
+                </center>
                 <br></br>
-                <br></br>
-                <h1>CATEGORY :</h1><br>
+            </div>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-default">            
+                <a href="add-post.php">Add Post</a>
+            </button>
+        </div>
+        <br></br>
+    </div>
     <center>
-    <table border="1" width="400px">
+    <table border="1" width="900px">
     <tr>
-        <td><center><b>NAMA CATEGORY</b></center></td>
+        <td><center><b>TITLE</b></center></td>
         <td><center><b>ACTION</b></center></td>
     </tr>
     <tr>
-         <td><a href="info.php">INFO</a></td>
-         <td><a href="edit-post.php">Edit</a>  / <a id="delete"href="delete-post.php?id="delete" onclick="hapus()">Delete</a>
+        <td><a href="post.php">APAKAH YANG DIMAKSUD CODING ITU?</a></td>
+        <td><a href="edit-post.php">Edit</a>  /  <a href="delete-post.php">Delete</a></td>
+       
     </tr>
     <tr>
-         <td><a href="tips.php">TIPS</a></td>
-         <td><a href="edit-post.php">Edit</a>  / <a id="delete"href="delete-post.php?id="delete" onclick="hapus()">Delete</a>
+        <td><a href="post2.php">APAKAH ANDA INGIN MENJADI PROGRAMMER?</a></td>
+         <td><a href="edit-post.php">Edit</a>  /  <a href="delete-post.php">Delete</a></td>
     </tr>
     <tr>
-         <td><a href="tutorial.php">TUTORIAL</a></td>
-         <td><a href="edit-post.php">Edit</a>  / <a id="delete"href="delete-post.php?id="delete" onclick="hapus()">Delete</a>
+        <td><a href="post3.php">CARA SANTAI BELAJAR PEMROGRAMAN</a></td>
+         <td><a href="edit-post.php">Edit</a>  /  <a href="delete-post.php">Delete</a></td>
+    </tr>
+    <tr>
+        <td><a href="post4.php">JENIS-JENIS ERROR SAAT CODING</a></td>
+         <td><a href="edit-post.php">Edit</a>  /  <a href="delete-post.php">Delete</a></td>
+    </tr>
+    <tr>
+        <td><a href="post5.php">Cara Membuat Database Dan Table Mysql Di PHP Myadmin XAMPP</a></td>
+         <td><a href="edit-post.php">Edit</a>  /  <a href="delete-post.php">Delete</a></td>
     </tr>
     </table>
     </center>
-            </div>
-         </div>
-    </div>
-
     <hr>
 
     <!-- Footer -->
-    <br>
-    </br>
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <br></br>
                     <center>
                     <a href="https://www.facebook.com/clarissanuril.ristanty"><img src="img/fb.png"></a>
                     <a href="https://plus.google.com/u/0/114011647164395005859"><img src="img/google.jpg"></img></a>

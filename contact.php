@@ -80,42 +80,42 @@
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Name</label>
-                            <input type="text" class="form-control" placeholder="Name" name="nama" id="name" required data-validation-required-message="Please enter your name.">
+                            <input type="text" class="form-control" placeholder="Name" name="name"  required data-validation-required-message="Please enter your name.">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Email </label>
-                            <input type="email" class="form-control" placeholder="Email" name="email" id="email" required data-validation-required-message="Please enter your email.">
+                            <input type="email" class="form-control" placeholder="Email" name="email" required data-validation-required-message="Please enter your email.">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Username</label>
-                            <input type="text" class="form-control" placeholder="Username" id="Usernamme" name="username" required data-validation-required-message="Please enter your username.">
+                            <input type="text" class="form-control" placeholder="Username"  name="username" required data-validation-required-message="Please enter your username.">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Password </label>
-                            <input type="Password" class="form-control" placeholder="Password" name="pass1" id="showpassword" required data-validation-required-message="Please enter your password.">
+                            <input type="Password" class="form-control" placeholder="Password" name="pass1" required data-validation-required-message="Please enter your password.">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Re-Type Password </label>
-                            <input type="Password" class="form-control" placeholder="Masukan Lagi Password" name="pass2" id="showpassword" required data-validation-required-message="Please enter your password.">
+                            <input type="Password" class="form-control" placeholder="Masukan Lagi Password" name="pass2"  required data-validation-required-message="Please enter your password.">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Birthday</label>                         
-                            <input type="text" class="form-control" placeholder="Birthday, Contoh : 2000-03-21" name="birthday" id="Birthday" required data-validation-required-message="Please enter your birthday.">
+                            <input type="text" class="form-control" placeholder="Birthday, Contoh : 2000-03-21" name="birthday" required data-validation-required-message="Please enter your birthday.">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
