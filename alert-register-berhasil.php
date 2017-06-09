@@ -11,7 +11,7 @@
 	text: "Register Berhasil.",
 	timer: 2000,
 	showConfirmButton: false });
-	setTimeout("location.href='admin.php'", 2000);
+	setTimeout("location.href='login.php'", 2000);
 	</script>
 	</body>
 </html>

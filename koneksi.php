@@ -1,11 +1,9 @@
-<?php
-$host		= 'localhost'; 
-$username	= 'root'; //nama username
-$password	= ''; //password jika tadak ada bisa di kosongi seperti contoh 
-$db      	= 'db_blog'; //nama database
 
-$db_link	= mysqli_connect($host,$username,$password,$db);
-if (!$db_link){
-	echo 'Tidak dapat terhubung ke database';
-}
+<?php
+$host="localhost";
+$username="root";
+$password="";
+$db="db_blog";
+$koneksi=mysqli_connect($host,$username) or die ("Gagal koneksi");
+$database=mysqli_select_db($koneksi,$db) or die ("Database tidak bisa dipilih");
 ?>
