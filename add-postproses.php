@@ -1,13 +1,19 @@
-
-<?php ;
+<?php 
 include ("koneksi.php");
-$title_post     = $_POST['title_post'];
-$content    = $_POST['content'];
-$category   = $_POST['category'];
+session_start();
+$title_post = $_POST['title'];
+$content = $_POST['posting'];
+$category = $_POST['category'];
 
-mysqli_query($koneksi, "UPDATE tbl_post set title_post='$title_post', content='$content', category='$category' where title_post='$_GET[title_post]'");
-header('location:berhasil-addpost.php');
+$query = "INSERT INTO tbl_post (title_post, content, id_category) VALUES ('$title_post', '$content', '$category')";
+$hasil = mysqli_query($koneksi,$query);
+if ($hasil) 
+{
+	include ("alert-add-berhasil.php");
+}
+else
+{
+	echo "Data Gagal Masuk.";exit();
+}
 
 ?>
-
-

@@ -99,10 +99,6 @@
                         <input type="password" name="pass1" class="form-control" placeholder="Password">
 						<span class="glyphicon glyphicon-lock form-control-feedback"></span>
                     </div>
-                    <div class="form-group has-feedback">
-                        <input type="password" name="pass2" class="form-control" placeholder="Masukan Lagi Password">
-                        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                    </div>
 
                     <div class="row">
                         <div align="center" class="col-xs-10">
@@ -113,14 +109,14 @@
             </div>
             <br></br>
             <div class="row">
-                 <form action="contact.php" method="post">
-                        <div align="center" class="col-xs-10">
-                            <button type="submit" class="btn btn-primary btn-block btn-flat">Make a New Account</button>
-                        </div>
-                    </div>
+                <form action="contact.php" method="post">
+                    <div align="center" class="col-xs-10">
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">Make a New Account</button>
+                    </div>  
                 </form>
             </div>
         </div>
+    </div>
         <!-- Footer -->
     <footer>
         <div class="container">

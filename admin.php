@@ -1,3 +1,8 @@
+<?php
+    include "cek.php";
+    include "koneksi.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,7 +60,7 @@
                         <a href="kategori.php">Category</a>
                     </li>
                     <li>
-                        <a href="contact.php">Log out</a>
+                        <a href="logout.php">Log out</a>
                     </li>
                 </ul>
             </div>

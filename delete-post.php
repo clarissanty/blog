@@ -1,4 +1,7 @@
-
+<?php
+    include "cek.php";
+    include "koneksi.php";
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -81,7 +84,7 @@
                         <a href="kategori.php">Category</a>
                     </li>
                     <li>
-                        <a href="contact.php">Log out</a>
+                        <a href="logout.php">Log out</a>
                     </li>
                 </ul>
             </div>
@@ -116,11 +119,40 @@
                 <br></br>
             </div>
         </div>
+        
         <div>
             <button type="submit" class="btn btn-default">            
                 <a href="add-post.php">Add Post</a>
             </button>
         </div>
+        <br></br>
+    </div>
+    <table align="center" border="1" width="900px">
+        <thead>
+            <tr>
+                <th><center>Title</center></th>
+                <th><center>Action</center></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php 
+                $tampil = mysqli_query($koneksi, "SELECT * FROM tbl_post"); 
+                while($r_tampil=mysqli_fetch_array($tampil)){
+                    echo "
+                        <tr>
+                            <td>$r_tampil[title_post]</td>
+                            <td>
+                                <a href='edit-post.php'> <button type='button' class='btn btn-info'><i class='fa fa-pencil'></i></button></a>
+                                <a href='delete-post.php'><button type='button' class='btn btn-danger'><i class='fa fa-trash'></i></button></a>
+                            </td>
+                        </tr>
+                    ";  
+                }    
+            ?>
+        </tbody>
+    </table>
+    </br>
+    </br>
         <br></br>
     </div>
     <center>

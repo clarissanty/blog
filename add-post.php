@@ -1,4 +1,7 @@
-
+<?php
+    include "cek.php";
+    include "koneksi.php";
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -60,7 +63,7 @@
                         <a href="kategori.php">Category</a>
                     </li>
                     <li>
-                        <a href="contact.php">Log out</a>
+                        <a href="logout.php">Log out</a>
                     </li>
                 </ul>
             </div>
@@ -94,11 +97,11 @@
                 <br></br>
                 <br></br>
                 <h1>POST :</h1>
-                     <form name="loginAdmin" id="contactForm" novalidate>
+                <form action="add-postproses.php" method="post" name="loginAdmin" id="contactForm" novalidate>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Title</label>
-                            <input type="text" class="form-control" placeholder="Title" id="Title" required data-validation-required-message="Please enter your title post.">
+                            <input type="text" class="form-control" placeholder="Title" name="title" id="Title" required data-validation-required-message="Please enter your title post.">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
@@ -118,26 +121,25 @@
                             <br/>
                             <label>Category :</label>
                             <br></br>
-                            <select name="Category">
-                            <option value=""></option>
-                            <option value="Info">INFO</option>
-                            <option value="Tips">TIPS</option>
-                            <option value="Tutorial">Tutorial</option>
+                            <select name="category">
+                                <option value="0">--------</option>
+                                <option value="1">INFO</option>
+                                <option value="2">TIPS</option>
+                                <option value="3">Tutorial</option>
+                                <option value="99">Lain-Lain</option>
                             </select>
-                            <br />
+                            <br/>
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
-                </form>
                     <br></br>
                     <div>
                     <br/>
                         <center>
-                        <button type="submit"  class="btn btn-default">
-                           <a href="add-postproses.php">SIMPAN</a>
-                        </button>
+                            <button type="submit"  class="btn btn-default">SIMPAN</button>
                         </center>
                     </div>
+                </form>
             </div>
         </div>
     </div>
@@ -150,11 +152,11 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <center>
-                    <a href="https://www.facebook.com/clarissanuril.ristanty"><img src="img/fb.png"></a>
-                    <a href="https://plus.google.com/u/0/114011647164395005859"><img src="img/google.jpg"></img></a>
-                    <a href="https://twitter.com/ClarisShanty"><img src="img/twitter.png"></img></a>
-                    <a href="https://www.instagram.com/clarissanuril/"><img src="img/insagram.jpg"></img></a>
-                    <a href="https://www.youtube.com/channel/UCmOKXHaXrQJOqRxxlOWB3NQ"><img src="img/youtobe.jpg"></img></a>
+                        <a href="https://www.facebook.com/clarissanuril.ristanty"><img src="img/fb.png"></a>
+                        <a href="https://plus.google.com/u/0/114011647164395005859"><img src="img/google.jpg"></img></a>
+                        <a href="https://twitter.com/ClarisShanty"><img src="img/twitter.png"></img></a>
+                        <a href="https://www.instagram.com/clarissanuril/"><img src="img/insagram.jpg"></img></a>
+                        <a href="https://www.youtube.com/channel/UCmOKXHaXrQJOqRxxlOWB3NQ"><img src="img/youtobe.jpg"></img></a>
                    </center>
                     <p class="copyright text-muted">Copyright &copy; Shans Blog 2017</p>
                 </div>
