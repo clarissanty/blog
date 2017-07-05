@@ -9,7 +9,7 @@ $query = "INSERT INTO tbl_post (title_post, content, id_category) VALUES ('$titl
 $hasil = mysqli_query($koneksi,$query);
 if ($hasil) 
 {
-	include ("alert-add-berhasil.php");
+	include ("alert-add-post.php");
 }
 else
 {

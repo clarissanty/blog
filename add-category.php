@@ -1,18 +1,6 @@
- 
 <?php
-    include "koneksi.php";
     include "cek.php";
-
-    if (isset($_GET['id_post']) && !empty($_GET['id_post'])) {
-        $id         = $_GET['id_post'];
-        $stmt       = mysqli_query($koneksi, "SELECT * FROM tbl_post WHERE id_post = '$id'");
-        $r          = $stmt->fetch_object();
-
-} else {
-
-    header('location:pos.php');
-
-}
+    include "koneksi.php";
 ?>
 
 <!DOCTYPE html>
@@ -26,11 +14,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Shans Blog - Edit Pos</title>
+    <title>Shans Blog - Add Pos</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
-
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -51,6 +38,7 @@
     <![endif]-->
 
 </head>
+
 <body>
 
     <!-- Navigation -->
@@ -103,81 +91,44 @@
     <!-- Main Content -->
     <div class="container">
         <div class="row">
-            <form action="edit-prosespost.php" method="post" name="loginAdmin" id="contactForm" novalidate>
-            <input type="hidden" name="" value="<?php $r->id_post; ?>" name="id_post">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <center><p><h1>SELAMAT DATANG ADMIN</h1></p></center>
-                 <center>(Silakan isi tabel di bawah ini..)</center>
+                <center>(Silakan isi tabel di bawah ini..)</center>
                 <br></br>
-                <br></br>
-                <h1>POST :</h1>
+                <h1>Name Category :</h1>
+                <form action="add-categoryproses.php" method="post" name="loginAdmin" id="contactForm" novalidate>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Title</label>
-                            <input type="text" class="form-control" value="<?php echo $r->title_post; ?>" id="Title"  name="title" required >
-                            <p class="help-block text-danger"></p>
-                            
-                        </div>
-                    </div>
-                    <div class="row control-group">
-                        <div>
-                            <br/>
-                            <label>Content : </label>
-                            <br/>
-                            <textarea id="posting" name="posting">
-                                <?php echo $r->content; ?>
-                            </textarea>
-
-                            <script type="text/javascript">
-                            var editor = CKEDITOR.replace('posting');
-                            </script>
-                            
-                        </div>
-                    </div>
-                    <div class="row control-group">
-                        <div>
-                            <br/>
-                            <label>Category :</label>
-                            <br></br>
-                            <select name="category">
-                                <option value="0">--------</option>
-                                <option value="1">INFO</option>
-                                <option value="2">TIPS</option>
-                                <option value="3">Tutorial</option>
-                                <option value="99">Lain-Lain</option>
-                            </select>
-                            <br />
+                            <label>Name Category</label>
+                            <input type="text" class="form-control" placeholder="Name category" name="name_category" id="Name_category" required data-validation-required-message="Please enter your name category.">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
-                </form>
-                <br></br>
+                    <br></br>
                     <div>
                     <br/>
                         <center>
-                        <button type="submit"  class="btn btn-default">SIMPAN</button>
-
+                            <button type="submit"  class="btn btn-default">SIMPAN</button>
                         </center>
                     </div>
+                </form>
             </div>
         </div>
     </div>
 
     <hr>
-          
+
     <!-- Footer -->
-    <br>
-    </br>
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <center>
-                    <a href="https://www.facebook.com/clarissanuril.ristanty"><img src="img/fb.png"></a>
-                    <a href="https://plus.google.com/u/0/114011647164395005859"><img src="img/google.jpg"></img></a>
-                    <a href="https://twitter.com/ClarisShanty"><img src="img/twitter.png"></img></a>
-                    <a href="https://www.instagram.com/clarissanuril/"><img src="img/insagram.jpg"></img></a>
-                    <a href="https://www.youtube.com/channel/UCmOKXHaXrQJOqRxxlOWB3NQ"><img src="img/youtobe.jpg"></img></a>
+                        <a href="https://www.facebook.com/clarissanuril.ristanty"><img src="img/fb.png"></a>
+                        <a href="https://plus.google.com/u/0/114011647164395005859"><img src="img/google.jpg"></img></a>
+                        <a href="https://twitter.com/ClarisShanty"><img src="img/twitter.png"></img></a>
+                        <a href="https://www.instagram.com/clarissanuril/"><img src="img/insagram.jpg"></img></a>
+                        <a href="https://www.youtube.com/channel/UCmOKXHaXrQJOqRxxlOWB3NQ"><img src="img/youtobe.jpg"></img></a>
                    </center>
                     <p class="copyright text-muted">Copyright &copy; Shans Blog 2017</p>
                 </div>
@@ -201,6 +152,3 @@
 </body>
 
 </html>
-
-
- 

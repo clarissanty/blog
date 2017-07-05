@@ -13,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Shans Blog - Edit Pos</title>
+    <title>Shans Blog - Edit Category</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -122,11 +122,12 @@
                             <br/>
                             <label>Category :</label>
                             <br></br>
-                            <select name="Category">
-                            <option value=""></option>
-                            <option value="Info">INFO</option>
-                            <option value="Tips">TIPS</option>
-                            <option value="Tutorial">Tutorial</option>
+                            <select name="category">
+                                <option value="0">--------</option>
+                                <option value="1">INFO</option>
+                                <option value="2">TIPS</option>
+                                <option value="3">Tutorial</option>
+                                <option value="99">Lain-Lain</option>
                             </select>
                             <br />
                             <p class="help-block text-danger"></p>

@@ -57,7 +57,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="pos.php">PosT</a>
+                        <a href="pos.php">Post</a>
                     </li>
                     <li>
                         <a href="kategori.php">Category</a>
