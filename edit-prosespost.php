@@ -1,23 +1,23 @@
 
 
+
 <?php
 	include("koneksi.php");
 	
-	$title_post = $_POST['title'];
-	$content    = $_POST['posting'];
-	$category   = $_POST['category'];
+	$title_post = $_POST['title_post'];
 	
-	mysqli_query($koneksi, "UPDATE tbl_post SET title='$title_post', content='$posting', category='$category' WHERE id='$_GET[id_post]'");
-    $r_tampil['id_post'];
-    $r_tampil['title_post'];
-    $r_tampil['content'];
-    $r_tampil['category'];
+	$update = "UPDATE tbl_post SET WHERE title_post='$title_post'" ;
 
-     if($r_tampil){
-     	header('location:berhasil-editpost.php');
-     }
-     else{
-     	header('location:edit-post.php');
-     }
-	
+    $hasil = mysqli_query($koneksi,$update);
+    if ($hasil) 
+    {
+        include ("berhasil-editpost.php");
+    }
+    else
+    {
+        echo "Data Gagal Masuk.";exit();
+    }
+
+    
+    
 ?>

@@ -2,17 +2,10 @@
 <?php
     include "koneksi.php";
     include "cek.php";
-
-    if (isset($_GET['id_post']) && !empty($_GET['id_post'])) {
-        $id         = $_GET['id_post'];
-        $stmt       = mysqli_query($koneksi, "SELECT * FROM tbl_post WHERE id_post = '$id'");
-        $r          = $stmt->fetch_object();
-
-} else {
-
-    header('location:pos.php');
-
-}
+    
+    $id         = $_GET['id_post'];
+    $stmt       = mysqli_query($koneksi, "SELECT * FROM tbl_post WHERE id_post = '$id'");
+    $r          = $stmt->fetch_object();
 ?>
 
 <!DOCTYPE html>
@@ -103,7 +96,7 @@
     <!-- Main Content -->
     <div class="container">
         <div class="row">
-            <form action="edit-prosespost.php" method="post" name="loginAdmin" id="contactForm" novalidate>
+            <form action="edit-prosespost.php" method="POST" name="loginAdmin" id="contactForm" novalidate>
             <input type="hidden" name="" value="<?php $r->id_post; ?>" name="id_post">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <center><p><h1>SELAMAT DATANG ADMIN</h1></p></center>
@@ -114,7 +107,7 @@
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Title</label>
-                            <input type="text" class="form-control" value="<?php echo $r->title_post; ?>" id="Title"  name="title" required >
+                            <input type="text" class="form-control" value="<?php echo $r->title_post; ?>" id="Title"  name="title_post" required >
                             <p class="help-block text-danger"></p>
                             
                         </div>
@@ -134,31 +127,31 @@
                             
                         </div>
                     </div>
-                    <div class="row control-group">
+                   <div class="row control-group">
                         <div>
                             <br/>
                             <label>Category :</label>
-                            <br></br>
-                            <select name="category">
-                                <option value="0">--------</option>
-                                <option value="1">INFO</option>
-                                <option value="2">TIPS</option>
-                                <option value="3">Tutorial</option>
-                                <option value="99">Lain-Lain</option>
-                            </select>
-                            <br />
-                            <p class="help-block text-danger"></p>
+                            <div class="input-field col s6">
+                            <?php 
+                            $result = mysqli_query ($koneksi,"SELECT * FROM tbl_category");
+                            echo '<select name="name_category" class="browser-default"';
+                            echo '<option>---Pilih Category---</option>';
+                            while ($row = mysqli_fetch_array($result)) {
+                            echo '<option value="' . $row['id_category'] . '">' . $row['name_category'] . '</option>';
+                            }
+                            echo '</select>';
+                            ?>
                         </div>
                     </div>
-                </form>
-                <br></br>
+                    <br></br>
                     <div>
                     <br/>
                         <center>
-                        <button type="submit"  class="btn btn-default">SIMPAN</button>
+                        <button type="submit" class="btn btn-default">UPDATE</button>
 
                         </center>
                     </div>
+                </form>
             </div>
         </div>
     </div>
@@ -198,6 +191,8 @@
     <!-- Theme JavaScript -->
     <script src="js/clean-blog.min.js"></script>
 
+
+  
 </body>
 
 </html>

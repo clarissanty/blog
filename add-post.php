@@ -120,19 +120,18 @@
                         <div>
                             <br/>
                             <label>Category :</label>
-                            <br></br>
-                            <select name="category">
-                                <option value="0">--------</option>
-                                <option value="1">INFO</option>
-                                <option value="2">TIPS</option>
-                                <option value="3">Tutorial</option>
-                                <option value="99">Lain-Lain</option>
-                            </select>
-                            <br/>
-                            <p class="help-block text-danger"></p>
+                            <div class="input-field col s6">
+                            <?php 
+                            $result = mysqli_query ($koneksi,"SELECT * FROM tbl_category");
+                            echo '<select name="name_category" class="browser-default"';
+                            echo '<option>---Pilih Category---</option>';
+                            while ($row = mysqli_fetch_array($result)) {
+                            echo '<option value="' . $row['id_category'] . '">' . $row['name_category'] . '</option>';
+                            }
+                            echo '</select>';
+                            ?>
                         </div>
                     </div>
-                    <br></br>
                     <div>
                     <br/>
                         <center>

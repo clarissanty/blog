@@ -37,7 +37,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Shans Blog - Pos</title>
+    <title>Shans Blog - Kategori</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -144,7 +144,6 @@
                         <td>
                            <a href="edit-category.php?id_ category=<?php echo $r_tampil['id_category']; ?>" class="btn btn-info"><i class="fa fa-pencil"></i></a>
                            <a href="delete-category.php?id_category=<?php echo $r_tampil['id_category']; ?>" class="btn btn-danger btn-delete"><i class="fa fa-trash"></i></a>
-                                      
                         </td>
                      </tr>
                     <?php
@@ -198,8 +197,8 @@
                 var getLink = $(this).attr('href');
                 
                 swal({
-                    title: 'Delete Article',
-                    text: 'Are you sure?',
+                    title: 'Delete Artikel',
+                    text: 'Yakin di hapus? Kategori masih ini mempunyai isi.',
                     html: true,
                     confirmButtonColor: '#d9534f',
                     showCancelButton: true,
@@ -212,9 +211,9 @@
 
            $(document).ready(function () {
            $(".open_modal").click(function(e) {
-              var m = $(this).attr("id_post");
+              var m = $(this).attr("id_category");
                    $.ajax({
-                           url: "edit-post.php",
+                           url: "edit-category.php",
                            type: "GET",
                            data : {id: m,},
                            success: function (ajaxData){

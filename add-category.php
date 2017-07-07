@@ -14,7 +14,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Shans Blog - Add Pos</title>
+    <title>Shans Blog - Add Kategori</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">

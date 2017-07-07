@@ -1,7 +1,11 @@
+ 
 <?php
-    include "cek.php";
     include "koneksi.php";
+    include "cek.php";
+    
+   
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +17,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Shans Blog - Edit Category</title>
+    <title>Shans Blog - Edit Kategori</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -87,69 +91,40 @@
         </div>
     </header>
 
+   
     <!-- Main Content -->
     <div class="container">
         <div class="row">
+            <form action="edit-prosescategory.php?id_category=<?php echo $id_category; ?>" method="POST" name="loginAdmin" id="contactForm" novalidate>
+            <input type="hidden" name="" value="<?php $r->id_category; ?>" name="id_category">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <center><p><h1>SELAMAT DATANG ADMIN</h1></p></center>
-                <center>(Silakan isi tabel di bawah ini..)</center>
+                 <center>(Silakan isi tabel di bawah ini..)</center>
                 <br></br>
-                <br></br>
-                <h1>POST :</h1>
-                     <form name="loginAdmin" id="contactForm" novalidate>
-                    <form method="POST" action="edit-prosescategory.php?title_post=<?php echo $r['title_post']; ?>">
-                
+                <h1>CATEGORY :</h1>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Title</label>
-                            <input type="text" class="form-control" placeholder="Title" name="title_post" required data-validation-required-message="Please enter your title post." >
+                            <label>Name Category</label>
+                            <input type="text" class="form-control" placeholder="Name Category" value="<?php $r->name_category; ?>" id="Name Category"  name="name_category" required >
                             <p class="help-block text-danger"></p>
+                            
                         </div>
                     </div>
-                    <div class="row control-group">
-                        <div>
-                            <br/>
-                            <label>Content : </label>
-                            <br/>
-                            <textarea id="posting" name="posting" value="<?php echo $r['content']; ?>"></textarea>
-                            <script type="text/javascript">
-                            var editor = CKEDITOR.replace('posting');
-                            </script>
-                        </div>
-                    </div>
-                    <div class="row control-group">
-                        <div>
-                            <br/>
-                            <label>Category :</label>
-                            <br></br>
-                            <select name="category">
-                                <option value="0">--------</option>
-                                <option value="1">INFO</option>
-                                <option value="2">TIPS</option>
-                                <option value="3">Tutorial</option>
-                                <option value="99">Lain-Lain</option>
-                            </select>
-                            <br />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
-                </form>
-
-                <br></br>
+                    <br></br>
                     <div>
                     <br/>
                         <center>
-                        <button type="submit"  class="btn btn-default">
-                           <a href="edit-prosescategory.php">SIMPAN</a>
-                        </button>
+                        <button type="submit" class="btn btn-default">UPDATE</button>
+
                         </center>
                     </div>
+                </form>
             </div>
         </div>
     </div>
 
     <hr>
-
+          
     <!-- Footer -->
     <br>
     </br>
@@ -183,7 +158,11 @@
     <!-- Theme JavaScript -->
     <script src="js/clean-blog.min.js"></script>
 
+
+  
 </body>
 
 </html>
-      
+
+
+ 

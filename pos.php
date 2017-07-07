@@ -194,8 +194,8 @@
                 var getLink = $(this).attr('href');
                 
                 swal({
-                    title: 'Delete Article',
-                    text: 'Are you sure?',
+                    title: 'Delete Artikel',
+                    text: 'Yakin ingin di hapus?',
                     html: true,
                     confirmButtonColor: '#d9534f',
                     showCancelButton: true,
