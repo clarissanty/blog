@@ -2,7 +2,9 @@
 <?php
     include "koneksi.php";
     include "cek.php";
-    
+    $id_category        = $_GET['id_category'];
+    $stmt       = mysqli_query($koneksi, "SELECT * FROM tbl_category WHERE id_category = '$id_category'");
+    $r          = $stmt->fetch_object();
    
 ?>
 
@@ -95,19 +97,18 @@
     <!-- Main Content -->
     <div class="container">
         <div class="row">
-            <form action="edit-prosescategory.php?id_category=<?php echo $id_category; ?>" method="POST" name="loginAdmin" id="contactForm" novalidate>
+            <form action="edit-prosescategory.php?id_category=<?php echo $id_category?>" method="POST" name="loginAdmin" id="contactForm" novalidate>
             <input type="hidden" name="" value="<?php $r->id_category; ?>" name="id_category">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <center><p><h1>SELAMAT DATANG ADMIN</h1></p></center>
                  <center>(Silakan isi tabel di bawah ini..)</center>
                 <br></br>
-                <h1>CATEGORY :</h1>
+                <h1>NAME CATEGORY :</h1>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Name Category</label>
-                            <input type="text" class="form-control" placeholder="Name Category" value="<?php $r->name_category; ?>" id="Name Category"  name="name_category" required >
+                            <input type="text" class="form-control" value="<?php echo $r->name_category; ?>" id="Name Category"  name="name_category" required >
                             <p class="help-block text-danger"></p>
-                            
                         </div>
                     </div>
                     <br></br>
@@ -115,7 +116,6 @@
                     <br/>
                         <center>
                         <button type="submit" class="btn btn-default">UPDATE</button>
-
                         </center>
                     </div>
                 </form>

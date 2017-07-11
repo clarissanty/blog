@@ -1,3 +1,7 @@
+<?php
+ 
+    include "koneksi.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,58 +80,22 @@
         </div>
     </header>
 
-    <!-- Main Content -->
+    <!-- Coba Dulu -->
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-preview">
-                    <a href="post.php">
-                        <h2 class="post-title">
-                           APAKAH YANG DIMAKSUD CODING ITU?
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Coding adalah sesuatu cara untuk membuat atau merancang website yang di lakukan
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">SHANTY</a> pada 28 APRIL 2017</p>
+                    <?php 
+                        $query = mysqli_query($koneksi, "SELECT * FROM tbl_post AS post ORDER BY post.id_post ASC"); 
+                        while($r_tampil=mysqli_fetch_array($query)){ ?>   
+                            <a href="detail.php?detail_id=<?php echo $r_tampil['id_post'];?>">
+                                <h2><?php echo $r_tampil['title_post']; ?></h2>
+                            </a>     
+                            <p class="post-meta">Di posting pada : <?php echo $r_tampil['created_at']; ?></p>         
+                    <?php
+                        }    
+                    ?>
                 </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="post2.php">
-                        <h2 class="post-title">
-                            APAKAH ANDA INGIN MENJADI PROGRAMMER?
-                        </h2>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">SHANTY</a> pada 28 APRIL 2017</p>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="post3.php">
-                        <h2 class="post-title">
-                           CARA SANTAI BELAJAR PEMROGRAMAN
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Beberapa cara yang berbeda tiap-tiap orang mempunyai cara sendiri untuk memulai belajar pemrograman dan memulai mengoding.
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">SHANTY</a> pada 28 APRIL 2017</p>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="post4.php">
-                        <h2 class="post-title">
-                            JENIS-JENIS ERROR SAAT CODING
-                        </h2>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">SHANTY</a> pada 28 APRIL 2017</p>
-                </div>
-                <hr>
-                <!-- Pager -->
-                <ul class="pager">
-                    <li class="next">
-                        <a href="lanjut.php">Lihat selanjutnya &rarr;</a>
-                    </li>
-                </ul>
             </div>
         </div>
     </div>

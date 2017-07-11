@@ -96,7 +96,7 @@
     <!-- Main Content -->
     <div class="container">
         <div class="row">
-            <form action="edit-prosespost.php" method="POST" name="loginAdmin" id="contactForm" novalidate>
+            <form action="edit-prosespost.php?id=<?php echo $id?>" method="POST" name="loginAdmin" id="contactForm" novalidate>
             <input type="hidden" name="" value="<?php $r->id_post; ?>" name="id_post">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <center><p><h1>SELAMAT DATANG ADMIN</h1></p></center>
