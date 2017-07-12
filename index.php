@@ -75,7 +75,7 @@
                         <span class="subheading">SELAMAT DATANG DI SHANS BLOG</span>
                          <span class="subheading">@Shanty</span>
                     </div>
-                </div>
+                 </div>
             </div>
         </div>
     </header>
@@ -87,11 +87,12 @@
                 <div class="post-preview">
                     <?php 
                         $query = mysqli_query($koneksi, "SELECT * FROM tbl_post AS post ORDER BY post.id_post ASC"); 
-                        while($r_tampil=mysqli_fetch_array($query)){ ?>   
-                            <a href="detail.php?detail_id=<?php echo $r_tampil['id_post'];?>">
-                                <h2><?php echo $r_tampil['title_post']; ?></h2>
-                            </a>     
-                            <p class="post-meta">Di posting pada : <?php echo $r_tampil['created_at']; ?></p>         
+                        while($r=mysqli_fetch_array($query)){ ?>   
+                            <a href="detail.php?detail_id=<?php echo $r['id_post'];?>">
+                                <h2><?php echo $r['title_post']; ?></h2>
+                            </a>
+                            
+                            <p class="post-meta">Di posting pada : <?php echo $r['created_at']; ?></p>         
                     <?php
                         }    
                     ?>
