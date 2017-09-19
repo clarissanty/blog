@@ -1,6 +1,12 @@
-SELECT post.id_post, post.title_post, category.name_category
-
-FROM tbl_category AS category LEFT JOIN tbl_post AS post ON category.id_category = post.id_category
-WHERE category.id_category;
-
-SELECT * FROM tbl_post AS post ORDER BY post.id_post ASC;tbl_post
+CREATE TABLE tbl_respondent(
+npm VARCHAR(50) NOT NULL PRIMARY KEY,
+name VARCHAR(100),
+phone VARCHAR(50),
+email VARCHAR(100),
+parents VARCHAR(100),
+parent_phone VARCHAR(50),
+parent_address VARCHAR(250),
+prody_code VARCHAR(10),
+prody VARCHAR(50),
+faculty VARCHAR(50)
+);

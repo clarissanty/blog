@@ -117,9 +117,7 @@
             </div>
         </div>
         <div>
-            <button type="submit" class="btn btn-default">            
-                <a href="add-post.php">Add Post</a>
-            </button>
+            <a href="add-post.php">Add Post</a>
         </div>
         <br></br>
     </div>

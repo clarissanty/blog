@@ -121,10 +121,7 @@
             </div>
         </div>
         <div>
-            <button type="submit" class="btn btn-default">            
-                <a href="add-category.php">Add Category</a>
-            </button>
-      
+            <a href="add-category.php">Add Category</a>
         </div>
     </div>
     <form>
